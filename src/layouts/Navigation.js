@@ -4,15 +4,36 @@ import {
   Button
 } from 'react-bootstrap';
 
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { Fragment } from 'react';
 
 function Navigation(props) {
 
   const history = useHistory()
 
+  const [isSignUp, setIsSignUp] = React.useState(false)
   const [isLogin, setIsLogin] = React.useState(false)
+  const [isForgot, setIsForgot] = React.useState(false)
   const [isLogout, setIsLogout] = React.useState(false)
+
+  const handleMasuk = (e) => {
+    e.preventDefault()
+    setIsForgot(false)
+    setIsSignUp(false)
+    setIsLogin(true)
+  }
+
+  const handleDaftar = (e) => {
+    e.preventDefault()
+    setIsLogin(false)
+    setIsSignUp(true)
+  }
+
+  const handleForgot = (e) => {
+    e.preventDefault()
+    setIsLogin(false)
+    setIsForgot(true)
+  }
 
   const openLogin = (e) => {
     e.preventDefault()
@@ -50,202 +71,213 @@ function Navigation(props) {
         <a className="navbar-brand" href="/"><img src="/assets/images/brand/logo/logo.svg" alt="Cover" /></a>
         {/* Mobile view nav wrap */}
         <ul className="navbar-nav navbar-right-wrap ml-auto d-lg-none d-flex nav-top-wrap">
-          <li className="dropdown stopevent">
-            <a className="btn btn-light btn-icon rounded-circle text-muted indicator indicator-primary" href="#!" role="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i className="fe fe-bell"> </i>
-            </a>
-            <div className="dropdown-menu dropdown-menu-right shadow" aria-labelledby="dropdownNotification">
-              <div>
-                <div className="border-bottom px-3 pb-3 d-flex justify-content-between align-items-center">
-                  <span className="h5 mb-0">Notifications</span>
-                  <a href="# " className="text-muted"><span className="align-middle"><i className="fe fe-settings mr-1" /></span></a>
-                </div>
-                <ul className="list-group list-group-flush notification-list-scroll">
-                  <li className="list-group-item bg-light">
-                    <div className="row">
-                      <div className="col">
-                        <div className="d-flex">
-                          <img src="./assets/images/avatar/avatar-1.jpg" alt="Cover" className="avatar-md rounded-circle" />
-                          <div className="ml-3">
-                            <h5 className="font-weight-bold mb-1">Kristin Watson:</h5>
-                            <p className="mb-3">
-                              Krisitn Watsan like your comment on course Javascript
-                              Introduction!
-                            </p>
-                            <span className="font-size-xs text-muted">
-                              <span><span className="fe fe-thumbs-up text-success mr-1" />2 hours ago,</span>
-                              <span className="ml-1">2:19 PM</span>
-                            </span>
-                          </div>
-                        </div>
-                        <a className="stretched-link" href="#!" />
+          {
+            props.token ?
+              <Fragment>
+                <li className="dropdown stopevent">
+                  <a className="btn btn-light btn-icon rounded-circle text-muted indicator indicator-primary" href="#!" role="button" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i className="fe fe-bell"> </i>
+                  </a>
+                  <div className="dropdown-menu dropdown-menu-right shadow" aria-labelledby="dropdownNotification">
+                    <div>
+                      <div className="border-bottom px-3 pb-3 d-flex justify-content-between align-items-center">
+                        <span className="h5 mb-0">Notifications</span>
+                        <a href="# " className="text-muted"><span className="align-middle"><i className="fe fe-settings mr-1" /></span></a>
                       </div>
-                      <div className="col-auto text-center">
-                        <a href="#!" className="badge-dot badge-info" data-toggle="tooltip" data-placement="top" title data-original-title="Mark as read">
-                        </a>
-                        <div>
-                          <a href="#!" data-toggle="tooltip" data-placement="top" title data-original-title="Remove">
-                            <i className="fe fe-x text-muted" />
-                          </a>
-                        </div>
+                      <ul className="list-group list-group-flush notification-list-scroll">
+                        <li className="list-group-item bg-light">
+                          <div className="row">
+                            <div className="col">
+                              <div className="d-flex">
+                                <img src="./assets/images/avatar/avatar-1.jpg" alt="Cover" className="avatar-md rounded-circle" />
+                                <div className="ml-3">
+                                  <h5 className="font-weight-bold mb-1">Kristin Watson:</h5>
+                                  <p className="mb-3">
+                                    Krisitn Watsan like your comment on course Javascript
+                                    Introduction!
+                                  </p>
+                                  <span className="font-size-xs text-muted">
+                                    <span><span className="fe fe-thumbs-up text-success mr-1" />2 hours ago,</span>
+                                    <span className="ml-1">2:19 PM</span>
+                                  </span>
+                                </div>
+                              </div>
+                              <a className="stretched-link" href="#!" />
+                            </div>
+                            <div className="col-auto text-center">
+                              <a href="#!" className="badge-dot badge-info" data-toggle="tooltip" data-placement="top" title data-original-title="Mark as read">
+                              </a>
+                              <div>
+                                <a href="#!" data-toggle="tooltip" data-placement="top" title data-original-title="Remove">
+                                  <i className="fe fe-x text-muted" />
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li className="list-group-item">
+                          <div className="row">
+                            <div className="col">
+                              <div className="d-flex">
+                                <img src="./assets/images/avatar/avatar-2.jpg" alt="Cover" className="avatar-md rounded-circle" />
+                                <div className="ml-3">
+                                  <h5 className="font-weight-bold mb-1">Brooklyn Simmons</h5>
+                                  <p className="mb-3">
+                                    Just launched a new Courses React for Beginner.
+                                  </p>
+                                  <span className="font-size-xs text-muted">
+                                    <span><span className="fe fe-thumbs-up text-success mr-1" />Oct 9,</span>
+                                    <span className="ml-1">1:20 PM</span>
+                                  </span>
+                                </div>
+                              </div>
+                              <a className="stretched-link" href="#!" />
+                            </div>
+                            <div className="col-auto text-center">
+                              <a href="#!" className="badge-dot badge-secondary" data-toggle="tooltip" data-placement="top" title data-original-title="Mark as unread">
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li className="list-group-item">
+                          <div className="row">
+                            <div className="col">
+                              <div className="d-flex">
+                                <img src="./assets/images/avatar/avatar-3.jpg" alt="Cover" className="avatar-md rounded-circle" />
+                                <div className="ml-3">
+                                  <h5 className="font-weight-bold mb-1">Jenny Wilson</h5>
+                                  <p className="mb-3">
+                                    Krisitn Watsan like your comment on course Javascript
+                                    Introduction!
+                                  </p>
+                                  <span className="font-size-xs text-muted">
+                                    <span><span className="fe fe-thumbs-up text-info mr-1" />Oct 9,</span>
+                                    <span className="ml-1">1:56 PM</span>
+                                  </span>
+                                </div>
+                              </div>
+                              <a className="stretched-link" href="#!" />
+                            </div>
+                            <div className="col-auto text-center">
+                              <a href="#!" className="badge-dot badge-secondary" data-toggle="tooltip" data-placement="top" title data-original-title="Mark as unread">
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li className="list-group-item">
+                          <div className="row">
+                            <div className="col">
+                              <div className="d-flex">
+                                <img src="./assets/images/avatar/avatar-4.jpg" alt="Cover" className="avatar-md rounded-circle" />
+                                <div className="ml-3">
+                                  <h5 className="font-weight-bold mb-1">Sina Ray</h5>
+                                  <p className="mb-3">
+                                    You earn new certificate for complete the Javascript
+                                    Beginner course.
+                                  </p>
+                                  <span className="font-size-xs text-muted">
+                                    <span><span className="fe fe-award text-warning mr-1" />Oct 9,</span>
+                                    <span className="ml-1">1:56 PM</span>
+                                  </span>
+                                </div>
+                              </div>
+                              <a className="stretched-link" href="#!" />
+                            </div>
+                            <div className="col-auto text-center">
+                              <a href="#!" className="badge-dot badge-secondary" data-toggle="tooltip" data-placement="top" title data-original-title="Mark as unread">
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <div className="border-top px-3 pt-3 pb-0">
+                        <a href="./pages/notification-history.html" className="text-link font-weight-semi-bold">See all
+                          Notifications</a>
                       </div>
                     </div>
-                  </li>
-                  <li className="list-group-item">
-                    <div className="row">
-                      <div className="col">
-                        <div className="d-flex">
-                          <img src="./assets/images/avatar/avatar-2.jpg" alt="Cover" className="avatar-md rounded-circle" />
-                          <div className="ml-3">
-                            <h5 className="font-weight-bold mb-1">Brooklyn Simmons</h5>
-                            <p className="mb-3">
-                              Just launched a new Courses React for Beginner.
-                            </p>
-                            <span className="font-size-xs text-muted">
-                              <span><span className="fe fe-thumbs-up text-success mr-1" />Oct 9,</span>
-                              <span className="ml-1">1:20 PM</span>
-                            </span>
-                          </div>
-                        </div>
-                        <a className="stretched-link" href="#!" />
-                      </div>
-                      <div className="col-auto text-center">
-                        <a href="#!" className="badge-dot badge-secondary" data-toggle="tooltip" data-placement="top" title data-original-title="Mark as unread">
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="list-group-item">
-                    <div className="row">
-                      <div className="col">
-                        <div className="d-flex">
-                          <img src="./assets/images/avatar/avatar-3.jpg" alt="Cover" className="avatar-md rounded-circle" />
-                          <div className="ml-3">
-                            <h5 className="font-weight-bold mb-1">Jenny Wilson</h5>
-                            <p className="mb-3">
-                              Krisitn Watsan like your comment on course Javascript
-                              Introduction!
-                            </p>
-                            <span className="font-size-xs text-muted">
-                              <span><span className="fe fe-thumbs-up text-info mr-1" />Oct 9,</span>
-                              <span className="ml-1">1:56 PM</span>
-                            </span>
-                          </div>
-                        </div>
-                        <a className="stretched-link" href="#!" />
-                      </div>
-                      <div className="col-auto text-center">
-                        <a href="#!" className="badge-dot badge-secondary" data-toggle="tooltip" data-placement="top" title data-original-title="Mark as unread">
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="list-group-item">
-                    <div className="row">
-                      <div className="col">
-                        <div className="d-flex">
-                          <img src="./assets/images/avatar/avatar-4.jpg" alt="Cover" className="avatar-md rounded-circle" />
-                          <div className="ml-3">
-                            <h5 className="font-weight-bold mb-1">Sina Ray</h5>
-                            <p className="mb-3">
-                              You earn new certificate for complete the Javascript
-                              Beginner course.
-                            </p>
-                            <span className="font-size-xs text-muted">
-                              <span><span className="fe fe-award text-warning mr-1" />Oct 9,</span>
-                              <span className="ml-1">1:56 PM</span>
-                            </span>
-                          </div>
-                        </div>
-                        <a className="stretched-link" href="#!" />
-                      </div>
-                      <div className="col-auto text-center">
-                        <a href="#!" className="badge-dot badge-secondary" data-toggle="tooltip" data-placement="top" title data-original-title="Mark as unread">
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <div className="border-top px-3 pt-3 pb-0">
-                  <a href="./pages/notification-history.html" className="text-link font-weight-semi-bold">See all
-                    Notifications</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li className="dropdown ml-2">
-            <a className="rounded-circle" href="#!" role="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div className="avatar avatar-md avatar-indicators avatar-online">
-                <img alt="avatar" src="./assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
-              </div>
-            </a>
-            <div className="dropdown-menu dropdown-menu-right shadow" aria-labelledby="dropdownUser">
-              <div className="dropdown-item">
-                <div className="d-flex">
-                  <div className="avatar avatar-md avatar-indicators avatar-online">
-                    <img alt="avatar" src="./assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
                   </div>
-                  <div className="ml-3 lh-1">
-                    <h5 className="mb-1">Annette Black</h5>
-                    <p className="mb-0 text-muted">annette@geeksui.com</p>
+                </li>
+                <li className="dropdown ml-2">
+                  <a className="rounded-circle" href="#!" role="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div className="avatar avatar-md avatar-indicators avatar-online">
+                      <img alt="avatar" src="/assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
+                    </div>
+                  </a>
+                  <div className="dropdown-menu dropdown-menu-right shadow" aria-labelledby="dropdownUser">
+                    <div className="dropdown-item">
+                      <div className="d-flex">
+                        <div className="avatar avatar-md avatar-indicators avatar-online">
+                          <img alt="avatar" src="./assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
+                        </div>
+                        <div className="ml-3 lh-1">
+                          <h5 className="mb-1">Annette Black</h5>
+                          <p className="mb-0 text-muted">annette@geeksui.com</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="dropdown-divider" />
+                    <ul className="list-unstyled">
+                      <li className="dropdown-submenu dropleft-lg">
+                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
+                          <i className="fe fe-circle mr-2" />Status
+                        </a>
+                        <ul className="dropdown-menu">
+                          <li>
+                            <a className="dropdown-item" href="#!">
+                              <span className="badge-dot bg-success mr-2" />Online
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#!">
+                              <span className="badge-dot bg-secondary mr-2" />Offline
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#!">
+                              <span className="badge-dot bg-warning mr-2" />Away
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#!">
+                              <span className="badge-dot bg-danger mr-2" />Busy
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="./pages/profile-edit.html">
+                          <i className="fe fe-user mr-2" />Profile
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="./pages/student-subscriptions.html">
+                          <i className="fe fe-star mr-2" />Subscription
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#!">
+                          <i className="fe fe-settings mr-2" />Settings
+                        </a>
+                      </li>
+                    </ul>
+                    <div className="dropdown-divider" />
+                    <ul className="list-unstyled">
+                      <li>
+                        <a onClick={e => openLogout(e)} className="dropdown-item" href="#">
+                          <i className="fe fe-power mr-2" />Keluar
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                </div>
-              </div>
-              <div className="dropdown-divider" />
-              <ul className="list-unstyled">
-                <li className="dropdown-submenu dropleft-lg">
-                  <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
-                    <i className="fe fe-circle mr-2" />Status
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#!">
-                        <span className="badge-dot bg-success mr-2" />Online
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#!">
-                        <span className="badge-dot bg-secondary mr-2" />Offline
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#!">
-                        <span className="badge-dot bg-warning mr-2" />Away
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#!">
-                        <span className="badge-dot bg-danger mr-2" />Busy
-                      </a>
-                    </li>
-                  </ul>
                 </li>
-                <li>
-                  <a className="dropdown-item" href="./pages/profile-edit.html">
-                    <i className="fe fe-user mr-2" />Profile
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="./pages/student-subscriptions.html">
-                    <i className="fe fe-star mr-2" />Subscription
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#!">
-                    <i className="fe fe-settings mr-2" />Settings
-                  </a>
-                </li>
-              </ul>
-              <div className="dropdown-divider" />
-              <ul className="list-unstyled">
-                <li>
-                  <a onClick={e => openLogout(e)} className="dropdown-item" href="#">
-                    <i className="fe fe-power mr-2" />Sign Out
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
+              </Fragment>
+              :
+              <li className="mr-2">
+                <span onClick={e => openLogin(e)} className="nav-link pointer">
+                  Masuk
+                </span>
+              </li>
+          }
         </ul>
         {/* Button */}
         <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
@@ -662,7 +694,7 @@ function Navigation(props) {
                 </li>
                 <li>
                   <a className="dropdown-item" href="./pages/sign-in.html">
-                    Sign In
+                    Masuk
                   </a>
                 </li>
                 <li>
@@ -948,7 +980,7 @@ function Navigation(props) {
                     <ul className="list-unstyled">
                       <li>
                         <a onClick={e => openLogout(e)} className="dropdown-item" href="#">
-                          <i className="fe fe-power mr-2" />Sign Out
+                          <i className="fe fe-power mr-2" />Keluar
                       </a>
                       </li>
                     </ul>
@@ -958,7 +990,7 @@ function Navigation(props) {
               :
               <li className="nav-item">
                 <a onClick={e => openLogin(e)} className="nav-link" href="#">
-                  Sign In
+                  Masuk
                 </a>
               </li>
             }
@@ -971,36 +1003,92 @@ function Navigation(props) {
         <Modal.Body>
           <div className="card-body p-3">
             <div className="mb-4">
-              <a href="/"><img src="/assets/images/brand/logo/logo-icon.svg" className="mb-4" alt /></a>
-              <h1 className="mb-1 font-weight-bold">Sign in</h1>
-              <span>Don’t have an account? <a href="sign-up.html" className="ml-1">Sign up</a></span>
+              <Link to="/"><img src="/assets/images/brand/logo/logo-icon.svg" className="mb-4" alt="Cover" /></Link>
+              <h1 className="mb-1 font-weight-bold">Masuk</h1>
+              <span>Belum punya akun? <a onClick={e => handleDaftar(e)} href="#" className="ml-1">Daftar</a></span>
             </div>
-            {/* Form */}
             <section>
-              {/* Username */}
               <div className="form-group">
                 <label htmlFor="email" className="form-label">Email</label>
                 <input type="email" id="email" className="form-control" name="email" placeholder="Email address here" required />
               </div>
-              {/* Password */}
               <div className="form-group">
                 <label htmlFor="password" className="form-label">Password</label>
                 <input type="password" id="password" className="form-control" name="password" placeholder="**************" required />
               </div>
-              {/* Checkbox */}
               <div className="d-lg-flex justify-content-between align-items-center mb-4">
-                <div className="custom-control custom-checkbox">
-                  <input type="checkbox" className="custom-control-input" id="rememberme" />
-                  <label className="custom-control-label " htmlFor="rememberme">Remember me</label>
-                </div>
                 <div>
-                  <a href="forget-password.html">Forgot your password?</a>
+                  <a onClick={e => handleForgot(e)} href="#">Lupa password?</a>
                 </div>
               </div>
               <div>
                 {/* Button */}
-                <button onClick={handleLogin} type="button" className="btn btn-primary btn-block">Sign in</button>
+                <button onClick={handleLogin} type="button" className="btn btn-primary btn-block">Masuk</button>
               </div>
+            </section>
+          </div>
+        </Modal.Body>
+      </Modal>
+
+      <Modal show={isSignUp} onHide={() => setIsSignUp(false)} centered>
+        <Modal.Body>
+          <div className="card-body p-3">
+            <div className="mb-4">
+              <Link to="/"><img src="/assets/images/brand/logo/logo-icon.svg" className="mb-4" alt="Cover" /></Link>
+              <h1 className="mb-1 font-weight-bold">Daftar</h1>
+              <span>Sudah punya akun? <a onClick={e => handleMasuk(e)} href="#" className="ml-1">Masuk</a></span>
+            </div>
+            <section>
+              <div className="form-group">
+                <label htmlFor="nama" className="form-label">Nama</label>
+                <input type="text" id="nama" className="form-control" name="nama" placeholder="Nama" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">Email</label>
+                <input type="email" id="email" className="form-control" name="email" placeholder="Email" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password" className="form-label">Password</label>
+                <input type="password" id="password" className="form-control" name="password" placeholder="**************" required />
+              </div>
+              <div class="form-group">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="agreeCheck" />
+                  <label class="custom-control-label" for="agreeCheck">
+                    <span>
+                      Saya setuju dengan {' '}
+                      <a href="terms-condition-page.html">Syarat Layanan </a>
+                      {' '}and{' '}
+                      <a href="terms-condition-page.html">Kebijakan Pribadi.</a>
+                    </span>
+                  </label>
+								</div>
+							</div>
+              <div>
+                <button onClick={handleLogin} type="button" className="btn btn-primary btn-block">Daftar</button>
+              </div>
+            </section>
+          </div>
+        </Modal.Body>
+      </Modal>
+
+      <Modal show={isForgot} onHide={() => setIsForgot(false)} centered>
+        <Modal.Body>
+          <div className="card-body p-3">
+            <div className="mb-4">
+              <Link to="/"><img src="/assets/images/brand/logo/logo-icon.svg" className="mb-4" alt="Cover" /></Link>
+              <h1 className="mb-1 font-weight-bold">Lupa Password</h1>
+              <span>Masukan email kamu disini</span>
+            </div>
+            <section>
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">Email</label>
+                <input type="email" id="email" className="form-control" name="email" placeholder="Email" required />
+              </div>
+              <div className="mb-3">
+                <button type="button" className="btn btn-primary btn-block">Kirim Link Reset</button>
+              </div>
+              <span>Kembali ke <a onClick={e => handleMasuk(e)} href="#">Masuk</a></span>
             </section>
           </div>
         </Modal.Body>
@@ -1009,12 +1097,13 @@ function Navigation(props) {
       <Modal show={isLogout} onHide={closeLogout} centered size="sm">
         <Modal.Body>
           <div className="text-center">
-            <h3 className="mb-4">Are you sure to Sign Out ?</h3>
-            <Button variant="danger" onClick={handleLogout} className="mr-2">Yes</Button>
-            <Button variant="secondary" onClick={closeLogout}>No</Button>
+            <h3 className="mb-4">Kamu yakin mau keluar ?</h3>
+            <Button variant="danger" onClick={handleLogout} className="mr-2">Iya, Yakin</Button>
+            <Button variant="secondary" onClick={closeLogout}>Ngga, Jadi</Button>
           </div>
         </Modal.Body>
       </Modal>
+
     </nav>
   )
 }
