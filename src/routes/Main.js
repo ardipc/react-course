@@ -14,7 +14,11 @@ import NotFound from '../screens/NotFound';
 import Home from '../screens/home/Index';
 import Detail from '../screens/course/detail';
 
-import News from '../screens/news/Index';
+import ProfilIndex from '../screens/profil/index';
+import KursusIndex from '../screens/kursus/index';
+import InstrukturIndex from '../screens/instruktur/index';
+import KursusBaru from '../screens/instruktur/baru';
+
 import Blogs from '../screens/blogs/Index';
 
 class MainRoute extends React.Component {
@@ -27,15 +31,19 @@ class MainRoute extends React.Component {
     const routesPublic = [
       { path: '/detail', comp: props => <Detail {...props} token={this.props.token} /> },
       { path: '/blogs', comp: props => <Blogs {...props} token={this.props.token} /> },
-      { path: '/news', comp: props => <News {...props} token={this.props.token} /> },
       { path: '/', comp: props => <Home {...props} token={this.props.token} /> },
     ]
 
     const routesPrivate = [
-      { path: '/profile', comp: props => <Blogs {...props} token={this.props.token} /> },
-      { path: '/settings', comp: props => <News {...props} token={this.props.token} /> },
+      { path: '/detail', comp: props => <Detail {...props} token={this.props.token} /> },
+      
+      { path: '/kursus-baru', comp: props => <KursusBaru {...props} token={this.props.token} /> },
+
+      { path: '/profil', comp: props => <ProfilIndex {...props} token={this.props.token} /> },
+      { path: '/kursus', comp: props => <KursusIndex {...props} token={this.props.token} /> },
+      { path: '/instruktur', comp: props => <InstrukturIndex {...props} token={this.props.token} /> },
+      
       { path: '/blogs', comp: props => <Blogs {...props} token={this.props.token} /> },
-      { path: '/news', comp: props => <News {...props} token={this.props.token} /> },
       { path: '/', comp: props => <Home {...props} token={this.props.token} /> },
     ]
 
@@ -59,8 +67,8 @@ class MainRoute extends React.Component {
             }
             
             {/** Route for 404 */}
-            <Route path="/not-found" component={props => <NotFound {...props} token={this.props.token} />} />
-            <Route render={() => <Redirect to="/not-found" />} />
+            <Route path="/oops" component={props => <NotFound {...props} token={this.props.token} />} />
+            <Route render={() => <Redirect to="/oops" />} />
 
           </Switch>
         </Fragment>

@@ -207,7 +207,7 @@ function Navigation(props) {
                     <div className="dropdown-item">
                       <div className="d-flex">
                         <div className="avatar avatar-md avatar-indicators avatar-online">
-                          <img alt="avatar" src="./assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
+                          <img alt="avatar" src="/assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
                         </div>
                         <div className="ml-3 lh-1">
                           <h5 className="mb-1">Annette Black</h5>
@@ -217,47 +217,20 @@ function Navigation(props) {
                     </div>
                     <div className="dropdown-divider" />
                     <ul className="list-unstyled">
-                      <li className="dropdown-submenu dropleft-lg">
-                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
-                          <i className="fe fe-circle mr-2" />Status
-                        </a>
-                        <ul className="dropdown-menu">
-                          <li>
-                            <a className="dropdown-item" href="#!">
-                              <span className="badge-dot bg-success mr-2" />Online
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#!">
-                              <span className="badge-dot bg-secondary mr-2" />Offline
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#!">
-                              <span className="badge-dot bg-warning mr-2" />Away
-                            </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#!">
-                              <span className="badge-dot bg-danger mr-2" />Busy
-                            </a>
-                          </li>
-                        </ul>
+                      <li>
+                        <Link className="dropdown-item" to="/profil">
+                          <i className="fe fe-user mr-2" />Profil
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="./pages/profile-edit.html">
-                          <i className="fe fe-user mr-2" />Profile
-                        </a>
+                        <Link className="dropdown-item" to="/kursus">
+                          <i className="fe fe-star mr-2" />Kursus
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="./pages/student-subscriptions.html">
-                          <i className="fe fe-star mr-2" />Subscription
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#!">
-                          <i className="fe fe-settings mr-2" />Settings
-                        </a>
+                        <Link className="dropdown-item" to="/instruktur">
+                          <i className="fe fe-book mr-2" />Instruktur
+                        </Link>
                       </li>
                     </ul>
                     <div className="dropdown-divider" />
@@ -855,56 +828,6 @@ function Navigation(props) {
                             </div>
                           </div>
                         </li>
-                        <li className="list-group-item">
-                          <div className="row">
-                            <div className="col">
-                              <div className="d-flex">
-                                <img src="./assets/images/avatar/avatar-3.jpg" alt="Cover" className="avatar-md rounded-circle" />
-                                <div className="ml-3">
-                                  <h5 className="font-weight-bold mb-1">Jenny Wilson</h5>
-                                  <p className="mb-3">
-                                    Krisitn Watsan like your comment on course
-                                    Javascript Introduction!
-                                </p>
-                                  <span className="font-size-xs text-muted">
-                                    <span><span className="fe fe-thumbs-up text-info mr-1" />Oct 9,</span>
-                                    <span className="ml-1">1:56 PM</span>
-                                  </span>
-                                </div>
-                              </div>
-                              <a className="stretched-link" href="#!" />
-                            </div>
-                            <div className="col-auto text-center">
-                              <a href="#!" className="badge-dot badge-secondary" data-toggle="tooltip" data-placement="top" title data-original-title="Mark as unread">
-                              </a>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="list-group-item">
-                          <div className="row">
-                            <div className="col">
-                              <div className="d-flex">
-                                <img src="./assets/images/avatar/avatar-4.jpg" alt="Cover" className="avatar-md rounded-circle" />
-                                <div className="ml-3">
-                                  <h5 className="font-weight-bold mb-1">Sina Ray</h5>
-                                  <p className="mb-3">
-                                    You earn new certificate for complete the Javascript
-                                    Beginner course.
-                                </p>
-                                  <span className="font-size-xs text-muted">
-                                    <span><span className="fe fe-award text-warning mr-1" />Oct 9,</span>
-                                    <span className="ml-1">1:56 PM</span>
-                                  </span>
-                                </div>
-                              </div>
-                              <a className="stretched-link" href="#!" />
-                            </div>
-                            <div className="col-auto text-center">
-                              <a href="#!" className="badge-dot badge-secondary" data-toggle="tooltip" data-placement="top" title data-original-title="Mark as unread">
-                              </a>
-                            </div>
-                          </div>
-                        </li>
                       </ul>
                       <div className="border-top px-3 pt-3 pb-0">
                         <a href="./pages/notification-history.html" className="text-link font-weight-semi-bold">See all
@@ -916,14 +839,14 @@ function Navigation(props) {
                 <li className="dropdown ml-2 d-inline-block">
                   <a className="rounded-circle" href="#!" role="button" id="dropdownUserProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div className="avatar avatar-md avatar-indicators avatar-online">
-                      <img alt="avatar" src="./assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
+                      <img alt="avatar" src="/assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
                     </div>
                   </a>
                   <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownUserProfile">
                     <div className="dropdown-item">
                       <div className="d-flex">
                         <div className="avatar avatar-md avatar-indicators avatar-online">
-                          <img alt="avatar" src="./assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
+                          <img alt="avatar" src="/assets/images/avatar/avatar-1.jpg" className="rounded-circle" />
                         </div>
                         <div className="ml-3 lh-1">
                           <h5 className="mb-1">Annette Black</h5>
@@ -933,47 +856,20 @@ function Navigation(props) {
                     </div>
                     <div className="dropdown-divider" />
                     <ul className="list-unstyled">
-                      <li className="dropdown-submenu dropleft-lg">
-                        <a className="dropdown-item dropdown-list-group-item dropdown-toggle" href="#!">
-                          <i className="fe fe-circle mr-2" />Status
-                      </a>
-                        <ul className="dropdown-menu">
-                          <li>
-                            <a className="dropdown-item" href="#!">
-                              <span className="badge-dot bg-success mr-2" />Online
-                          </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#!">
-                              <span className="badge-dot bg-secondary mr-2" />Offline
-                          </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#!">
-                              <span className="badge-dot bg-warning mr-2" />Away
-                          </a>
-                          </li>
-                          <li>
-                            <a className="dropdown-item" href="#!">
-                              <span className="badge-dot bg-danger mr-2" />Busy
-                          </a>
-                          </li>
-                        </ul>
+                      <li>
+                        <Link className="dropdown-item" to="/profil">
+                          <i className="fe fe-user mr-2" />Profil
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="./pages/profile-edit.html">
-                          <i className="fe fe-user mr-2" />Profile
-                      </a>
+                        <Link className="dropdown-item" to="/kursus">
+                          <i className="fe fe-star mr-2" />Kursus
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="./pages/student-subscriptions.html">
-                          <i className="fe fe-star mr-2" />Subscription
-                      </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#!">
-                          <i className="fe fe-settings mr-2" />Settings
-                      </a>
+                        <Link className="dropdown-item" to="/instruktur">
+                          <i className="fe fe-book mr-2" />Instruktur
+                        </Link>
                       </li>
                     </ul>
                     <div className="dropdown-divider" />
