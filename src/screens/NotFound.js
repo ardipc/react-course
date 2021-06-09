@@ -1,10 +1,3 @@
-import React, { useState } from 'react';
-import {
-  Button,
-  Row,
-  Col,
-  Jumbotron
-} from 'react-bootstrap';
 
 function NotFound(props) {
   return (
@@ -17,7 +10,7 @@ function NotFound(props) {
       </div>
       {/* img */}
       <div className="offset-xl-1 col-xl-6 col-lg-6 col-md-12 col-12 mt-8 mt-lg-0">
-        <img src="/assets/images/error/404-error-img.svg" alt className="w-100" />
+        <img src="/assets/images/error/404-error-img.svg" alt="Cover" className="w-100" />
       </div>
     </div>
   )

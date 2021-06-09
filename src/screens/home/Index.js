@@ -28,7 +28,7 @@ function Index(props) {
               </div>
             </div>
             <div className=" col-xl-7 col-lg-6 col-md-12 text-lg-right text-center">
-              <img src="assets/images/hero/hero-img.png" alt className="img-fluid" />
+              <img src="assets/images/hero/hero-img.png" alt="Cover" className="img-fluid" />
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ function Index(props) {
                     {/* Card */}
                     <div className="card  mb-4 card-hover">
                       <Link to={`/detail/${i}`} className="card-img-top">
-                        <img src="assets/images/course/course-react.jpg" alt className="rounded-top card-img-top" />
+                        <img src="assets/images/course/course-react.jpg" alt="Cover" className="rounded-top card-img-top" />
                       </Link>
                       {/* Card Body */}
                       <div className="card-body">
@@ -127,7 +127,7 @@ function Index(props) {
                       <div className="card-footer">
                         <div className="row align-items-center no-gutters">
                           <div className="col-auto">
-                            <img src="assets/images/avatar/avatar-1.jpg" className="rounded-circle avatar-xs" alt />
+                            <img src="assets/images/avatar/avatar-1.jpg" className="rounded-circle avatar-xs" alt="Cover" />
                           </div>
                           <div className="col ml-2">
                             <span>Morris Mccoy</span>
@@ -162,7 +162,7 @@ function Index(props) {
                   <div className="item col-sm-4">
                     {/* Card */}
                     <div className="card  mb-4 card-hover">
-                      <a href="pages/course-single.html" className="card-img-top"><img src="assets/images/course/course-javascript.jpg" alt className="rounded-top card-img-top" /></a>
+                      <a href="pages/course-single.html" className="card-img-top"><img src="assets/images/course/course-javascript.jpg" alt="Cover" className="rounded-top card-img-top" /></a>
                       {/* Card Body */}
                       <div className="card-body">
                         <h4 className="mb-2 text-truncate-line-2 "><a href="pages/course-single.html" className="text-inherit">How to
@@ -199,7 +199,7 @@ function Index(props) {
                       <div className="card-footer">
                         <div className="row align-items-center no-gutters">
                           <div className="col-auto">
-                            <img src="assets/images/avatar/avatar-1.jpg" className="rounded-circle avatar-xs" alt />
+                            <img src="assets/images/avatar/avatar-1.jpg" className="rounded-circle avatar-xs" alt="Cover" />
                           </div>
                           <div className="col ml-2">
                             <span>Morris Mccoy</span>
@@ -234,7 +234,7 @@ function Index(props) {
                   <div className="item col-sm-4">
                     {/* Card */}
                     <div className="card  mb-4 card-hover">
-                      <a href="pages/course-single.html" className="card-img-top"><img src="assets/images/course/course-python.jpg" alt className="rounded-top card-img-top" /></a>
+                      <a href="pages/course-single.html" className="card-img-top"><img src="assets/images/course/course-python.jpg" alt="Cover" className="rounded-top card-img-top" /></a>
                       {/* Card Body */}
                       <div className="card-body">
                         <h4 className="mb-2 text-truncate-line-2 "><a href="pages/course-single.html" className="text-inherit">How to
@@ -271,7 +271,7 @@ function Index(props) {
                       <div className="card-footer">
                         <div className="row align-items-center no-gutters">
                           <div className="col-auto">
-                            <img src="assets/images/avatar/avatar-1.jpg" className="rounded-circle avatar-xs" alt />
+                            <img src="assets/images/avatar/avatar-1.jpg" className="rounded-circle avatar-xs" alt="Cover" />
                           </div>
                           <div className="col ml-2">
                             <span>Morris Mccoy</span>

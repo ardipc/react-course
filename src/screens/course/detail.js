@@ -1117,7 +1117,7 @@ export default function Detail() {
                         </div>
                         {/* Rating */}
                         <div className="media border-bottom pb-4 mb-4">
-                          <img src="../assets/images/avatar/avatar-2.jpg" alt className="rounded-circle avatar-lg" />
+                          <img src="../assets/images/avatar/avatar-2.jpg" alt="Cover" className="rounded-circle avatar-lg" />
                           <div className="media-body ml-3">
                             <h4 className="mb-1">
                               Max Hawkins
@@ -1140,7 +1140,7 @@ export default function Detail() {
                         </div>
                         {/* Rating */}
                         <div className="media border-bottom pb-4 mb-4">
-                          <img src="../assets/images/avatar/avatar-3.jpg" alt className="rounded-circle avatar-lg" />
+                          <img src="../assets/images/avatar/avatar-3.jpg" alt="Cover" className="rounded-circle avatar-lg" />
                           <div className="media-body ml-3">
                             <h4 className="mb-1">Arthur Williamson <span className="ml-1 font-size-xs text-muted">3 Days ago</span>
                             </h4>
@@ -1161,7 +1161,7 @@ export default function Detail() {
                         </div>
                         {/* Rating */}
                         <div className="media border-bottom pb-4 mb-4">
-                          <img src="../assets/images/avatar/avatar-4.jpg" alt className="rounded-circle avatar-lg" />
+                          <img src="../assets/images/avatar/avatar-4.jpg" alt="Cover" className="rounded-circle avatar-lg" />
                           <div className="media-body ml-3">
                             <h4 className="mb-1">Claire Jones <span className="ml-1 font-size-xs text-muted">4 Days ago</span></h4>
                             <div className="font-size-xs mb-2">
@@ -1183,7 +1183,7 @@ export default function Detail() {
                         </div>
                         {/* Rating */}
                         <div className="media">
-                          <img src="../assets/images/avatar/avatar-5.jpg" alt className="rounded-circle avatar-lg" />
+                          <img src="../assets/images/avatar/avatar-5.jpg" alt="Cover" className="rounded-circle avatar-lg" />
                           <div className="media-body ml-3">
                             <h4 className="mb-1">
                               Bessie Pena
@@ -1339,9 +1339,9 @@ export default function Detail() {
                 <div className="card-body">
                   <div className="d-flex align-items-center">
                     <div className="position-relative">
-                      <img src="../assets/images/avatar/avatar-1.jpg" alt className="rounded-circle avatar-xl" />
+                      <img src="../assets/images/avatar/avatar-1.jpg" alt="Cover" className="rounded-circle avatar-xl" />
                       <a href="#!" className="position-absolute mt-2 ml-n3" data-toggle="tooltip" data-placement="top" title="Verifed">
-                        <img src="../assets/images/svg/checked-mark.svg" alt height={30} width={30} />
+                        <img src="../assets/images/svg/checked-mark.svg" alt="Cover" height={30} width={30} />
                       </a>
                     </div>
                     <div className="ml-4">
@@ -1388,7 +1388,7 @@ export default function Detail() {
               <div className="col-lg-3 col-md-6 col-12">
                 {/* Card */}
                 <div className="card mb-4 card-hover">
-                  <a href="course-single.html" className="card-img-top"><img src="../assets/images/course/course-react.jpg" alt className="card-img-top rounded-top" /></a>
+                  <a href="course-single.html" className="card-img-top"><img src="../assets/images/course/course-react.jpg" alt="Cover" className="card-img-top rounded-top" /></a>
                   {/* Card body */}
                   <div className="card-body">
                     <h4 className="mb-2 text-truncate-line-2"><a href="course-single.html" className="text-inherit">How to
@@ -1419,7 +1419,7 @@ export default function Detail() {
                   <div className="card-footer">
                     <div className="row align-items-center no-gutters">
                       <div className="col-auto">
-                        <img src="../assets/images/avatar/avatar-1.jpg" className="rounded-circle avatar-xs" alt />
+                        <img src="../assets/images/avatar/avatar-1.jpg" className="rounded-circle avatar-xs" alt="Cover" />
                       </div>
                       <div className="col ml-2">
                         <span>Morris Mccoy</span>
@@ -1436,7 +1436,7 @@ export default function Detail() {
               <div className="col-lg-3 col-md-6 col-12">
                 {/* Card */}
                 <div className="card mb-4 card-hover">
-                  <a href="course-single.html" className="card-img-top"><img src="../assets/images/course/course-graphql.jpg" alt className="card-img-top rounded-top" /></a>
+                  <a href="course-single.html" className="card-img-top"><img src="../assets/images/course/course-graphql.jpg" alt="Cover" className="card-img-top rounded-top" /></a>
                   {/* Card body */}
                   <div className="card-body">
                     <h4 className="mb-2 text-truncate-line-2"><a href="course-single.html" className="text-inherit">GraphQL:
@@ -1467,7 +1467,7 @@ export default function Detail() {
                   <div className="card-footer">
                     <div className="row align-items-center no-gutters">
                       <div className="col-auto">
-                        <img src="../assets/images/avatar/avatar-2.jpg" className="rounded-circle avatar-xs" alt />
+                        <img src="../assets/images/avatar/avatar-2.jpg" className="rounded-circle avatar-xs" alt="Cover" />
                       </div>
                       <div className="col ml-2">
                         <span>Ted Hawkins</span>
@@ -1484,7 +1484,7 @@ export default function Detail() {
               <div className="col-lg-3 col-md-6 col-12">
                 {/* Card */}
                 <div className="card mb-4 card-hover">
-                  <a href="course-single.html" className="card-img-top"><img src="../assets/images/course/course-angular.jpg" alt className="card-img-top rounded-top" /></a>
+                  <a href="course-single.html" className="card-img-top"><img src="../assets/images/course/course-angular.jpg" alt="Cover" className="card-img-top rounded-top" /></a>
                   <div className="card-body">
                     <h4 className="mb-2 text-truncate-line-2"><a href="course-single.html" className="text-inherit">Angular -
                         the complete guide for beginner</a></h4>
@@ -1515,7 +1515,7 @@ export default function Detail() {
                   <div className="card-footer">
                     <div className="row align-items-center no-gutters">
                       <div className="col-auto">
-                        <img src="../assets/images/avatar/avatar-3.jpg" className="rounded-circle avatar-xs" alt />
+                        <img src="../assets/images/avatar/avatar-3.jpg" className="rounded-circle avatar-xs" alt="Cover" />
                       </div>
                       <div className="col ml-2">
                         <span>Juanita Bell</span>
@@ -1531,7 +1531,7 @@ export default function Detail() {
               </div>
               <div className="col-lg-3 col-md-6 col-12">
                 <div className="card mb-4 card-hover">
-                  <a href="course-single.html" className="card-img-top"><img src="../assets/images/course/course-python.jpg" alt className="card-img-top rounded-top" /></a>
+                  <a href="course-single.html" className="card-img-top"><img src="../assets/images/course/course-python.jpg" alt="Cover" className="card-img-top rounded-top" /></a>
                   <div className="card-body">
                     <h4 className="mb-2 text-truncate-line-2"><a href="course-single.html" className="text-inherit">The Python
                         Course: build web application</a></h4>
@@ -1561,7 +1561,7 @@ export default function Detail() {
                   <div className="card-footer">
                     <div className="row align-items-center no-gutters">
                       <div className="col-auto">
-                        <img src="../assets/images/avatar/avatar-4.jpg" className="rounded-circle avatar-xs" alt />
+                        <img src="../assets/images/avatar/avatar-4.jpg" className="rounded-circle avatar-xs" alt="Cover" />
                       </div>
                       <div className="col ml-2">
                         <span>Claire Robertson</span>

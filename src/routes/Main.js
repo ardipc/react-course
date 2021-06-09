@@ -7,10 +7,6 @@ import {
   Redirect
 } from 'react-router-dom';
 
-import {
-  Container
-} from 'react-bootstrap';
-
 import Navigation from '../layouts/Navigation';
 import Footer from '../layouts/Footer';
 import NotFound from '../screens/NotFound';

@@ -1,10 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
-  Navbar,
-  Nav,
-  NavDropdown,
-
   Modal,
   Button
 } from 'react-bootstrap';
@@ -70,7 +65,7 @@ function Navigation(props) {
                     <div className="row">
                       <div className="col">
                         <div className="d-flex">
-                          <img src="./assets/images/avatar/avatar-1.jpg" alt className="avatar-md rounded-circle" />
+                          <img src="./assets/images/avatar/avatar-1.jpg" alt="Cover" className="avatar-md rounded-circle" />
                           <div className="ml-3">
                             <h5 className="font-weight-bold mb-1">Kristin Watson:</h5>
                             <p className="mb-3">
@@ -100,7 +95,7 @@ function Navigation(props) {
                     <div className="row">
                       <div className="col">
                         <div className="d-flex">
-                          <img src="./assets/images/avatar/avatar-2.jpg" alt className="avatar-md rounded-circle" />
+                          <img src="./assets/images/avatar/avatar-2.jpg" alt="Cover" className="avatar-md rounded-circle" />
                           <div className="ml-3">
                             <h5 className="font-weight-bold mb-1">Brooklyn Simmons</h5>
                             <p className="mb-3">
@@ -124,7 +119,7 @@ function Navigation(props) {
                     <div className="row">
                       <div className="col">
                         <div className="d-flex">
-                          <img src="./assets/images/avatar/avatar-3.jpg" alt className="avatar-md rounded-circle" />
+                          <img src="./assets/images/avatar/avatar-3.jpg" alt="Cover" className="avatar-md rounded-circle" />
                           <div className="ml-3">
                             <h5 className="font-weight-bold mb-1">Jenny Wilson</h5>
                             <p className="mb-3">
@@ -149,7 +144,7 @@ function Navigation(props) {
                     <div className="row">
                       <div className="col">
                         <div className="d-flex">
-                          <img src="./assets/images/avatar/avatar-4.jpg" alt className="avatar-md rounded-circle" />
+                          <img src="./assets/images/avatar/avatar-4.jpg" alt="Cover" className="avatar-md rounded-circle" />
                           <div className="ml-3">
                             <h5 className="font-weight-bold mb-1">Sina Ray</h5>
                             <p className="mb-3">
@@ -776,7 +771,7 @@ function Navigation(props) {
                           <div className="row">
                             <div className="col">
                               <div className="d-flex">
-                                <img src="./assets/images/avatar/avatar-1.jpg" alt className="avatar-md rounded-circle" />
+                                <img src="./assets/images/avatar/avatar-1.jpg" alt="Cover" className="avatar-md rounded-circle" />
                                 <div className="ml-3">
                                   <h5 className="font-weight-bold mb-1">Kristin Watson:</h5>
                                   <p className="mb-3">
@@ -806,7 +801,7 @@ function Navigation(props) {
                           <div className="row">
                             <div className="col">
                               <div className="d-flex">
-                                <img src="./assets/images/avatar/avatar-2.jpg" alt className="avatar-md rounded-circle" />
+                                <img src="./assets/images/avatar/avatar-2.jpg" alt="Cover" className="avatar-md rounded-circle" />
                                 <div className="ml-3">
                                   <h5 className="font-weight-bold mb-1">
                                     Brooklyn Simmons
@@ -832,7 +827,7 @@ function Navigation(props) {
                           <div className="row">
                             <div className="col">
                               <div className="d-flex">
-                                <img src="./assets/images/avatar/avatar-3.jpg" alt className="avatar-md rounded-circle" />
+                                <img src="./assets/images/avatar/avatar-3.jpg" alt="Cover" className="avatar-md rounded-circle" />
                                 <div className="ml-3">
                                   <h5 className="font-weight-bold mb-1">Jenny Wilson</h5>
                                   <p className="mb-3">
@@ -857,7 +852,7 @@ function Navigation(props) {
                           <div className="row">
                             <div className="col">
                               <div className="d-flex">
-                                <img src="./assets/images/avatar/avatar-4.jpg" alt className="avatar-md rounded-circle" />
+                                <img src="./assets/images/avatar/avatar-4.jpg" alt="Cover" className="avatar-md rounded-circle" />
                                 <div className="ml-3">
                                   <h5 className="font-weight-bold mb-1">Sina Ray</h5>
                                   <p className="mb-3">
